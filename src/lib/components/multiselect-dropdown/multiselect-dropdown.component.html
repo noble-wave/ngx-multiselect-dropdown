@@ -1,0 +1,105 @@
+<div class="ngx-dropdown-container" (clickOutside)="handleClickOutside()">
+  <!-- Trigger Button -->
+  <button
+    type="button"
+    class="ngx-dropdown-trigger"
+    [attr.aria-expanded]="state.isOpen()"
+    [attr.aria-haspopup]="'listbox'"
+    [attr.aria-label]="placeholder()"
+    [disabled]="disabled()"
+    (click)="toggleDropdown()"
+  >
+    <span class="ngx-dropdown-trigger-text">{{ displayText() }}</span>
+    <span class="ngx-dropdown-trigger-icon" [class.open]="state.isOpen()">▼</span>
+  </button>
+
+  <!-- Clear Button -->
+  @if (state.hasSelection() && !disabled()) {
+    <button
+      type="button"
+      class="ngx-dropdown-clear"
+      aria-label="Clear selection"
+      (click)="clearSelection(); $event.stopPropagation()"
+    >
+      ✕
+    </button>
+  }
+
+  <!-- Dropdown Panel -->
+  @if (state.isOpen()) {
+    <div class="ngx-dropdown-panel" role="listbox" [attr.aria-label]="placeholder()">
+      <!-- Search Input -->
+      @if (mergedConfig().enableSearch) {
+        <div class="ngx-dropdown-search">
+          <input
+            type="text"
+            class="ngx-dropdown-search-input"
+            [placeholder]="mergedConfig().searchPlaceholder"
+            [value]="state.searchTerm()"
+            (input)="handleSearchInput($event)"
+            aria-label="Search items"
+          />
+        </div>
+      }
+
+      <!-- Select All Checkbox -->
+      @if (showSelectAll() && state.availableItems().length > 0) {
+        <div class="ngx-dropdown-select-all">
+          <label class="ngx-dropdown-option">
+            <input
+              type="checkbox"
+              [checked]="state.allSelected()"
+              [indeterminate]="state.hasSelection() && !state.allSelected()"
+              (change)="handleSelectAll()"
+              aria-label="Select all items"
+            />
+            <span class="ngx-dropdown-option-text">
+              {{ state.allSelected() ? mergedConfig().unselectAllText : mergedConfig().selectAllText }}
+            </span>
+          </label>
+        </div>
+      }
+
+      <!-- Options List -->
+      <div class="ngx-dropdown-list" [style.max-height.px]="mergedConfig().maxHeight">
+        @if (!state.hasResults()) {
+          <!-- No Results -->
+          <div class="ngx-dropdown-no-data">
+            {{ state.searchTerm() ? mergedConfig().noResultsText : mergedConfig().noDataText }}
+          </div>
+        } @else {
+          <!-- Items -->
+          @for (item of state.filteredItems(); track item.id; let idx = $index) {
+            <label
+              class="ngx-dropdown-option"
+              [class.selected]="state.isSelected(item.id)"
+              [class.disabled]="item.disabled"
+              [class.focused]="_focusedIndex() === idx"
+              role="option"
+              [attr.aria-selected]="state.isSelected(item.id)"
+              [attr.aria-disabled]="item.disabled"
+            >
+              @if (!mergedConfig().singleSelection) {
+                <input
+                  type="checkbox"
+                  [checked]="state.isSelected(item.id)"
+                  [disabled]="item.disabled"
+                  (change)="handleItemClick(item)"
+                  [attr.aria-label]="item.text"
+                />
+              }
+              <span
+                class="ngx-dropdown-option-text"
+                (click)="handleItemClick(item)"
+              >
+                {{ item.text }}
+              </span>
+            </label>
+          }
+        }
+      </div>
+    </div>
+  }
+</div>
+
+<!-- NOTE: Keyboard navigation implemented - see component.ts -->
