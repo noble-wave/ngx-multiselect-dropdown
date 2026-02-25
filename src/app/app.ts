@@ -85,6 +85,8 @@ export class App {
       textField: 'name',
       disabledField: 'disabled',
     },
+
+
   });
   protected closeSelection = signal<City[]>([]);
 

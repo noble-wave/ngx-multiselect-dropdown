@@ -150,11 +150,15 @@
   }
 }
 
-// Select All
+// Select All / Unselect All
 .ngx-dropdown-select-all {
   padding: 0.5rem;
   border-bottom: 1px solid var(--ngx-dropdown-border-color);
   background: var(--ngx-dropdown-hover-bg);
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 // Options List
@@ -211,11 +215,16 @@
   }
 
   input[type='checkbox'] {
-    cursor: pointer;
+    pointer-events: none; // Checkbox is controlled via binding, not direct clicks
+    margin: 0;
 
     &:disabled {
       cursor: not-allowed;
     }
+  }
+
+  .ngx-dropdown-option-text {
+    flex: 1;
   }
 }
 

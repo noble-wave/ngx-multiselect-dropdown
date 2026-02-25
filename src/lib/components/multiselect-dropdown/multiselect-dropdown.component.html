@@ -42,21 +42,38 @@
         </div>
       }
 
-      <!-- Select All Checkbox -->
+      <!-- Select All / Unselect All -->
       @if (showSelectAll() && state.availableItems().length > 0) {
         <div class="ngx-dropdown-select-all">
-          <label class="ngx-dropdown-option">
-            <input
-              type="checkbox"
-              [checked]="state.allSelected()"
-              [indeterminate]="state.hasSelection() && !state.allSelected()"
-              (change)="handleSelectAll()"
-              aria-label="Select all items"
-            />
-            <span class="ngx-dropdown-option-text">
-              {{ state.allSelected() ? mergedConfig().unselectAllText : mergedConfig().selectAllText }}
-            </span>
-          </label>
+          <!-- Show Select All when nothing selected OR partial selection -->
+          @if (!state.allSelected()) {
+            <div class="ngx-dropdown-option" (click)="handleSelectAll()">
+              <input
+                type="checkbox"
+                [checked]="false"
+                tabindex="-1"
+                aria-label="Select all items"
+              />
+              <span class="ngx-dropdown-option-text">
+                {{ mergedConfig().selectAllText }}
+              </span>
+            </div>
+          }
+          
+          <!-- Show Unselect All when something is selected -->
+          @if (state.hasSelection()) {
+            <div class="ngx-dropdown-option" (click)="handleUnselectAll()">
+              <input
+                type="checkbox"
+                [checked]="true"
+                tabindex="-1"
+                aria-label="Unselect all items"
+              />
+              <span class="ngx-dropdown-option-text">
+                {{ mergedConfig().unselectAllText }}
+              </span>
+            </div>
+          }
         </div>
       }
 
@@ -70,7 +87,7 @@
         } @else {
           <!-- Items -->
           @for (item of state.filteredItems(); track item.id; let idx = $index) {
-            <label
+            <div
               class="ngx-dropdown-option"
               [class.selected]="state.isSelected(item.id)"
               [class.disabled]="item.disabled"
@@ -78,23 +95,21 @@
               role="option"
               [attr.aria-selected]="state.isSelected(item.id)"
               [attr.aria-disabled]="item.disabled"
+              (click)="!item.disabled && handleItemClick(item)"
             >
               @if (!mergedConfig().singleSelection) {
                 <input
                   type="checkbox"
                   [checked]="state.isSelected(item.id)"
                   [disabled]="item.disabled"
-                  (change)="handleItemClick(item)"
                   [attr.aria-label]="item.text"
+                  tabindex="-1"
                 />
               }
-              <span
-                class="ngx-dropdown-option-text"
-                (click)="handleItemClick(item)"
-              >
+              <span class="ngx-dropdown-option-text">
                 {{ item.text }}
               </span>
-            </label>
+            </div>
           }
         }
       </div>

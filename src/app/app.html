@@ -14,7 +14,8 @@
       <div class="demo-example">
         <ngx-multiselect-dropdown
           [data]="simpleItems()"
-          [(ngModel)]="simpleSelection"
+          [ngModel]="simpleSelection()"
+          (ngModelChange)="simpleSelection.set($event)"
           placeholder="Select fruits"
           (selectionChange)="handleSelectionChange($event)"
         />
@@ -39,7 +40,8 @@
               disabledField: 'disabled'
             }
           }"
-          [(ngModel)]="citySelection"
+          [ngModel]="citySelection()"
+          (ngModelChange)="citySelection.set($event)"
           placeholder="Select cities"
         />
         <div class="demo-output">
@@ -57,7 +59,8 @@
         <ngx-multiselect-dropdown
           [data]="cities()"
           [config]="singleConfig()"
-          [(ngModel)]="singleSelection"
+          [ngModel]="singleSelection()"
+          (ngModelChange)="singleSelection.set($event)"
           placeholder="Choose one city"
         />
         <div class="demo-output">
@@ -75,7 +78,8 @@
         <ngx-multiselect-dropdown
           [data]="cities()"
           [config]="searchConfig()"
-          [(ngModel)]="searchSelection"
+          [ngModel]="searchSelection()"
+          (ngModelChange)="searchSelection.set($event)"
           placeholder="Search and select cities"
           (searchChange)="handleSearchChange($event)"
         />
@@ -94,7 +98,8 @@
         <ngx-multiselect-dropdown
           [data]="cities()"
           [config]="limitConfig()"
-          [(ngModel)]="limitSelection"
+          [ngModel]="limitSelection()"
+          (ngModelChange)="limitSelection.set($event)"
           placeholder="Select up to 3 cities"
         />
         <div class="demo-output">
@@ -112,7 +117,8 @@
         <ngx-multiselect-dropdown
           [data]="cities()"
           [config]="closeOnSelectConfig()"
-          [(ngModel)]="closeSelection"
+          [ngModel]="closeSelection()"
+          (ngModelChange)="closeSelection.set($event)"
           placeholder="Select cities (closes after each)"
         />
         <div class="demo-output">

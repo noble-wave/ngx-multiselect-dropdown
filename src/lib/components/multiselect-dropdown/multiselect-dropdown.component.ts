@@ -72,6 +72,15 @@ export class MultiselectDropdownComponent<T = any> implements ControlValueAccess
   private _onChange: (value: any) => void = () => {};
   private _onTouched: () => void = () => {};
   protected _focusedIndex = signal<number>(-1);
+  
+  /**
+   * Guard flag to prevent circular updates between internal state changes
+   * and external form control updates via writeValue().
+   * 
+   * When true, the CVA sync effect will skip calling _onChange() to avoid
+   * triggering writeValue() again, which would create an infinite loop.
+   */
+  private _skipNextEmit = false;
 
   // Merged configuration
   protected readonly mergedConfig = computed(() => ({
@@ -120,8 +129,17 @@ export class MultiselectDropdownComponent<T = any> implements ControlValueAccess
     );
 
     // Sync selection changes to form control
+    // Guard against circular updates: when writeValue() is called externally,
+    // we skip emitting to prevent triggering writeValue() again
     effect(() => {
       const selected = this.state.selectedItems();
+      
+      // Skip emission if this update came from writeValue()
+      if (this._skipNextEmit) {
+        this._skipNextEmit = false;
+        return;
+      }
+      
       const value = this.transformItemsToValue(selected, this.mergedConfig().singleSelection);
       this._onChange(value);
     });
@@ -147,7 +165,11 @@ export class MultiselectDropdownComponent<T = any> implements ControlValueAccess
 
   // ControlValueAccessor implementation
   writeValue(value: any): void {
-    if (!value) {
+    // Set guard flag to prevent the CVA sync effect from emitting back to forms
+    // This breaks the circular update loop: writeValue() → state update → effect → _onChange() → writeValue()
+    this._skipNextEmit = true;
+    
+    if (!value || (Array.isArray(value) && value.length === 0)) {
       this.state.clearSelection();
       return;
     }
@@ -208,11 +230,12 @@ export class MultiselectDropdownComponent<T = any> implements ControlValueAccess
   }
 
   protected handleSelectAll(): void {
-    if (this.state.allSelected()) {
-      this.state.clearSelection();
-    } else {
-      this.state.selectAll();
-    }
+    this.state.selectAll();
+    this._onTouched();
+  }
+
+  protected handleUnselectAll(): void {
+    this.state.clearSelection();
     this._onTouched();
   }
 
