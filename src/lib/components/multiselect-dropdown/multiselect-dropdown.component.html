@@ -42,7 +42,7 @@
         </div>
       }
 
-      <!-- Select All / Unselect All -->
+      <!-- Select All / Unselect All (Regular mode - no limit) -->
       @if (showSelectAll() && state.availableItems().length > 0) {
         <div class="ngx-dropdown-select-all">
           <!-- Show Select All when nothing selected OR partial selection -->
@@ -56,6 +56,41 @@
               />
               <span class="ngx-dropdown-option-text">
                 {{ mergedConfig().selectAllText }}
+              </span>
+            </div>
+          }
+          
+          <!-- Show Unselect All when something is selected -->
+          @if (state.hasSelection()) {
+            <div class="ngx-dropdown-option" (click)="handleUnselectAll()">
+              <input
+                type="checkbox"
+                [checked]="true"
+                tabindex="-1"
+                aria-label="Unselect all items"
+              />
+              <span class="ngx-dropdown-option-text">
+                {{ mergedConfig().unselectAllText }}
+              </span>
+            </div>
+          }
+        </div>
+      }
+
+      <!-- Select up to X / Unselect All (With selection limit) -->
+      @if (showSelectUpTo() && state.availableItems().length > 0) {
+        <div class="ngx-dropdown-select-all">
+          <!-- Show "Select up to X" when limit is set -->
+          @if (state.selectedCount() < mergedConfig().selectionLimit) {
+            <div class="ngx-dropdown-option" (click)="handleSelectUpTo()">
+              <input
+                type="checkbox"
+                [checked]="false"
+                tabindex="-1"
+                [attr.aria-label]="'Select up to ' + mergedConfig().selectionLimit + ' items'"
+              />
+              <span class="ngx-dropdown-option-text">
+                Select up to {{ mergedConfig().selectionLimit }}
               </span>
             </div>
           }

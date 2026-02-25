@@ -110,10 +110,16 @@ export class MultiselectDropdownComponent<T = any> implements ControlValueAccess
     return `${visible} (+${remaining} more)`;
   });
 
-  // Show "Select All" checkbox
+  // Show "Select All" checkbox - hide when selection limit is enabled
   protected readonly showSelectAll = computed(() => {
     const config = this.mergedConfig();
-    return config.enableSelectAll && !config.singleSelection;
+    return config.enableSelectAll && !config.singleSelection && config.selectionLimit === 0;
+  });
+
+  // Show "Select up to X" option when selection limit is enabled
+  protected readonly showSelectUpTo = computed(() => {
+    const config = this.mergedConfig();
+    return config.enableSelectAll && !config.singleSelection && config.selectionLimit > 0;
   });
 
   constructor() {
@@ -231,6 +237,14 @@ export class MultiselectDropdownComponent<T = any> implements ControlValueAccess
 
   protected handleSelectAll(): void {
     this.state.selectAll();
+    this._onTouched();
+  }
+
+  protected handleSelectUpTo(): void {
+    const limit = this.mergedConfig().selectionLimit;
+    const available = this.state.availableItems();
+    const idsToSelect = available.slice(0, limit).map(item => item.id);
+    this.state.setSelection(idsToSelect);
     this._onTouched();
   }
 
