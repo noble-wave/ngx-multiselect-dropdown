@@ -113,7 +113,7 @@ export class MultiselectDropdownComponent<T = any> implements ControlValueAccess
   // Show "Select All" checkbox - hide when selection limit is enabled
   protected readonly showSelectAll = computed(() => {
     const config = this.mergedConfig();
-    return config.enableSelectAll && !config.singleSelection && config.selectionLimit === 0;
+    return config.enableSelectAll && !config.singleSelection && config.selectionLimit <= 0;
   });
 
   // Show "Select up to X" option when selection limit is enabled

@@ -55,6 +55,7 @@
       <div class="demo-example">
         <ngx-multiselect-dropdown
           [data]="simpleItems()"
+          [config]="{ enableSelectAll: true }"
           [ngModel]="simpleSelection()"
           (ngModelChange)="simpleSelection.set($event)"
           placeholder="Select fruits"
@@ -75,6 +76,7 @@
         <ngx-multiselect-dropdown
           [data]="cities()"
           [config]="{
+            enableSelectAll: true,
             fieldMapping: {
               idField: 'id',
               textField: 'name',

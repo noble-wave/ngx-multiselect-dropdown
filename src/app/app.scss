@@ -185,12 +185,6 @@
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  }
 
   h2 {
     font-size: 1.5rem;
@@ -289,11 +283,7 @@
     }
 
     tbody tr {
-      transition: background 0.15s ease;
-
-      &:hover {
-        background: var(--noble-gray-50);
-      }
+      // No hover effect
     }
 
     kbd {
@@ -350,12 +340,6 @@
       padding: 0.75rem 0;
       border-left: 3px solid rgba(59, 130, 246, 0.8);
       padding-left: 1rem;
-      transition: all 0.3s ease;
-      
-      &:hover {
-        border-left-color: rgba(59, 130, 246, 1);
-        padding-left: 1.25rem;
-      }
 
       .company-logo-small {
         height: 40px;

@@ -56,6 +56,7 @@ export class App {
   // Multi-select with search
   protected searchConfig = signal<DropdownConfig>({
     enableSearch: true,
+    enableSelectAll: true,
     searchPlaceholder: 'Search cities...',
     fieldMapping: {
       idField: 'id',
@@ -81,6 +82,7 @@ export class App {
   // Close on select
   protected closeOnSelectConfig = signal<DropdownConfig>({
     closeOnSelect: true,
+    enableSelectAll: true,
     fieldMapping: {
       idField: 'id',
       textField: 'name',
