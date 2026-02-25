@@ -23,6 +23,7 @@ interface City {
 })
 export class App {
   protected readonly title = signal('ngx-multiselect-dropdown');
+  protected readonly currentYear = new Date().getFullYear();
 
   // Simple string array example
   protected simpleItems = signal<string[]>(['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry']);

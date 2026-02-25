@@ -1,9 +1,50 @@
 
 
 <div class="demo-container">
+  <!-- Professional Header with Branding -->
   <header class="demo-header">
-    <h1>{{ title() }}</h1>
-    <p class="subtitle">Modern Angular Multiselect Dropdown with Signals</p>
+    <div class="brand-section">
+      <a href="https://noble-wave.com/" target="_blank" rel="noopener noreferrer" class="logo-area">
+        <img src="/NameofCompany1.png" alt="Noble Wave Logo" class="company-logo" />
+        <div class="brand-info">
+          <p class="brand-tagline">Your Trusted IT Development Partner</p>
+        </div>
+      </a>
+      <a href="https://github.com/nasrealam/ngx-multiselect-dropdown" target="_blank" rel="noopener noreferrer" class="open-source-badge">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        Open Source
+      </a>
+    </div>
+    
+    <div class="hero-section">
+      <h2 class="library-title">{{ title() }}</h2>
+      <p class="library-subtitle">Modern Angular Multiselect Dropdown with Signals</p>
+      <div class="library-meta">
+        <span class="meta-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          Angular 21+
+        </span>
+        <span class="meta-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+          Signals Native
+        </span>
+        <span class="meta-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 11l3 3L22 4"/>
+            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+          </svg>
+          Production Ready
+        </span>
+      </div>
+    </div>
   </header>
 
   <main class="demo-content">
@@ -179,8 +220,48 @@
     </section>
   </main>
 
+  <!-- Professional Footer with Credits -->
   <footer class="demo-footer">
-    <p>Built with ❤️ using Angular {{ '21' }} and Signals</p>
+    <div class="footer-content">
+      <div class="footer-branding">
+        <div class="footer-logo">
+          <img src="/NameofCompany1.png" alt="Noble Wave Logo" class="company-logo-small" />
+        </div>
+        <p class="footer-description">
+          Building enterprise-grade solutions with modern technologies
+        </p>
+      </div>
+      
+      <div class="footer-info">
+        <div class="footer-section">
+          <h4>Library</h4>
+          <p class="library-name">ngx-multiselect-dropdown</p>
+          <p class="version">v1.0.0 • MIT License</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Developer</h4>
+          <p class="developer-name">Nasre Alam</p>
+          <p class="company-name">Noble Wave Company</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Tech Stack</h4>
+          <p>Angular 21+ • Signals</p>
+          <p>TypeScript • SCSS</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">© {{ currentYear }} Noble Wave. All rights reserved.</p>
+        <p class="open-source-note">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          Open Source Project • Built with ❤️
+        </p>
+      </div>
+    </div>
   </footer>
 </div>
 
