@@ -1,6 +1,68 @@
 {
   "name": "ngx-multiselect-dropdown",
   "version": "0.0.0",
+  "description": "Modern, powerful Angular multiselect dropdown component for Angular 17+ with Signals, standalone architecture, zero dependencies. Perfect for forms, filters, and multi-selection interfaces. Supports search, keyboard navigation, accessibility (WCAG 2.1), virtual scrolling, and reactive forms.",
+  "keywords": [
+    "angular",
+    "angular17",
+    "angular18",
+    "angular19",
+    "angular20",
+    "angular21",
+    "multiselect",
+    "multi-select",
+    "dropdown",
+    "select",
+    "multiselect-dropdown",
+    "angular-component",
+    "angular-library",
+    "standalone",
+    "signals",
+    "typescript",
+    "forms",
+    "reactive-forms",
+    "ng-model",
+    "control-value-accessor",
+    "form-control",
+    "accessibility",
+    "wcag",
+    "aria",
+    "keyboard-navigation",
+    "searchbox",
+    "filter",
+    "autocomplete",
+    "typeahead",
+    "checkbox",
+    "tags",
+    "chips",
+    "badges",
+    "ui-component",
+    "virtual-scroll",
+    "responsive",
+    "mobile",
+    "touch-friendly",
+    "zero-dependencies",
+    "lightweight",
+    "performant"
+  ],
+  "author": {
+    "name": "Noble wave",
+    "email": "info@noble-wave.com",
+    "url": "https://github.com/noble-wave"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noble-wave/ngx-multiselect-dropdown.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noble-wave/ngx-multiselect-dropdown/issues"
+  },
+  "homepage": "https://github.com/noble-wave/ngx-multiselect-dropdown#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -20,7 +82,6 @@
       }
     ]
   },
-  "private": true,
   "packageManager": "npm@11.6.2",
   "dependencies": {
     "@angular/common": "^21.1.0",
