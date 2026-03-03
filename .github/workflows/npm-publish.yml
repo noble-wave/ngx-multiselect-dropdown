@@ -1,0 +1,57 @@
+name: Publish to NPM
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    tags:
+      - 'v*'
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build library
+        run: npm run build:lib
+
+      - name: Update package name for publishing
+        run: |
+          cd dist/ngx-multiselect-dropdown
+          # Update package.json to use scoped name
+          node -e "const pkg = require('./package.json'); pkg.name = '@noble-wave/ngx-multiselect-dropdown'; const fs = require('fs'); fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));"
+
+      - name: Publish to NPM
+        run: |
+          cd dist/ngx-multiselect-dropdown
+          npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create Release Summary
+        run: |
+          echo "## 🚀 Published to NPM" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Package:** @noble-wave/ngx-multiselect-dropdown" >> $GITHUB_STEP_SUMMARY
+          echo "**Version:** $(node -p "require('./dist/ngx-multiselect-dropdown/package.json').version")" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Install:**" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`bash" >> $GITHUB_STEP_SUMMARY
+          echo "npm install @noble-wave/ngx-multiselect-dropdown" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
