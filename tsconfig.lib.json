@@ -1,0 +1,26 @@
+/* TypeScript configuration for Angular library build via ng-packagr */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/lib",
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "types": []
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true,
+    "compilationMode": "partial"
+  },
+  "include": [
+    "src/public-api.ts",
+    "src/lib/**/*.ts"
+  ],
+  "exclude": [
+    "src/app/**",
+    "**/*.spec.ts"
+  ]
+}

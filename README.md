@@ -378,11 +378,54 @@ npm start
 npm test
 
 # Build library for production
-npm run build
+npm run build:lib
 
 # Lint code
 npm run lint
 ```
+
+### Publishing to npm
+
+> For maintainers only. Requires an [npm Access Token](https://docs.npmjs.com/creating-and-viewing-access-tokens).
+
+**1. Set your npm token as an environment variable**
+
+```powershell
+# PowerShell
+$env:NPM_TOKEN = "npm_your_token_here"
+
+# Command Prompt
+set NPM_TOKEN=npm_your_token_here
+
+# Git Bash / macOS / Linux
+export NPM_TOKEN=npm_your_token_here
+```
+
+> Alternatively, set `NPM_TOKEN` permanently in your OS environment variables so you never need to set it again.
+
+**2. Dry run — verify what will be published**
+
+```bash
+npm run publish:lib:dry
+```
+
+**3. Publish to npm**
+
+```bash
+npm run publish:lib
+```
+
+**Release with automatic version bump**
+
+```bash
+npm run release:patch   # 1.0.0 → 1.0.1 (bug fixes)
+npm run release:minor   # 1.0.0 → 1.1.0 (new features)
+npm run release:major   # 1.0.0 → 2.0.0 (breaking changes)
+```
+
+Each `release:*` script bumps the version in `package.json`, builds the library, and publishes to npm in one step.
+
+---
 
 ### Contributing
 
