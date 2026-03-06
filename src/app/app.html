@@ -1,270 +1,803 @@
-
-
 <div class="demo-container">
-  <!-- Professional Header with Branding -->
-  <header class="demo-header">
-    <div class="brand-section">
-      <a href="https://noble-wave.com/" target="_blank" rel="noopener noreferrer" class="logo-area">
-        <img src="NameofCompany1.png" alt="Noble Wave Logo" class="company-logo" />
-        <div class="brand-info">
-          <p class="brand-tagline">Your Trusted IT Development Partner</p>
-        </div>
+  <!-- Navigation Bar -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <a href="https://noble-wave.com/" target="_blank" rel="noopener noreferrer" class="nav-logo">
+        <img src="NameofCompany1.png" alt="Noble Wave Logo" class="logo-img" />
       </a>
-      <a href="https://github.com/nasrealam/ngx-multiselect-dropdown" target="_blank" rel="noopener noreferrer" class="open-source-badge">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-        </svg>
-        Open Source
-      </a>
-    </div>
-    
-    <div class="hero-section">
-      <h2 class="library-title">{{ title() }}</h2>
-      <p class="library-subtitle">Modern Angular Multiselect Dropdown with Signals</p>
-      <div class="library-meta">
-        <span class="meta-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+      <div class="nav-links">
+        <a href="#quick-start" class="nav-link">Quick Start</a>
+        <a href="#examples" class="nav-link">Examples</a>
+        <a href="#api" class="nav-link">API</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="https://github.com/nasrealam/ngx-multiselect-dropdown" target="_blank" rel="noopener noreferrer" class="nav-link-github">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
           </svg>
-          Angular 21+
-        </span>
-        <span class="meta-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M12 6v6l4 2"/>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-background">
+      <div class="hero-gradient"></div>
+      <div class="hero-pattern"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">{{ title() }}</h1>
+      <p class="hero-description">
+        A powerful, modern multiselect dropdown component for Angular with Signals, 
+        built with the latest Angular 21+ features and best practices.
+      </p>
+      <div class="hero-features">
+        <div class="hero-feature">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
           Signals Native
-        </span>
-        <span class="meta-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 11l3 3L22 4"/>
-            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+        </div>
+        <div class="hero-feature">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
-          Production Ready
-        </span>
+          Standalone Components
+        </div>
+        <div class="hero-feature">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          TypeScript First
+        </div>
+        <div class="hero-feature">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Fully Accessible
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#quick-start" class="btn-primary">
+          Get Started
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="https://github.com/nasrealam/ngx-multiselect-dropdown" target="_blank" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          View on GitHub
+        </a>
       </div>
     </div>
   </header>
 
   <main class="demo-content">
-    <!-- Simple Example -->
-    <section class="demo-section">
-      <h2>Basic Multi-Select</h2>
-      <p>Simple string array with default configuration</p>
-      <div class="demo-example">
-        <ngx-multiselect-dropdown
-          [data]="simpleItems()"
-          [config]="{ enableSelectAll: true }"
-          [ngModel]="simpleSelection()"
-          (ngModelChange)="simpleSelection.set($event)"
-          placeholder="Select fruits"
-          (selectionChange)="handleSelectionChange($event)"
-        />
-        <div class="demo-output">
-          <strong>Selected:</strong>
-          {{ simpleSelection() | json }}
+    <!-- Quick Start -->
+    <section id="quick-start" class="content-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <div>
+          <h2 class="section-title">Quick Start</h2>
+          <p class="section-subtitle">Get up and running in under 2 minutes</p>
+        </div>
+      </div>
+      
+      <div class="installation-steps">
+        <div class="install-step">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3 class="step-title">Install via npm</h3>
+            <p class="step-description">Add the package to your Angular project</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-language">bash</span>
+                <button class="code-copy" (click)="copyToClipboard($event, 0)">
+                  {{ copiedIndex() === 0 ? 'Copied!' : 'Copy' }}
+                </button>
+              </div>
+              <pre><code>npm install ngx-multiselect-dropdown</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="install-step">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3 class="step-title">Import in your component</h3>
+            <p class="step-description">Use standalone component imports (Angular 21+)</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-language">typescript</span>
+                <button class="code-copy" (click)="copyToClipboard($event, 1)">
+                  {{ copiedIndex() === 1 ? 'Copied!' : 'Copy' }}
+                </button>
+              </div>
+              <pre><code>import &#123; signal &#125; from '&#64;angular/core';
+import &#123; NgxMultiselectDropdownComponent &#125; from 'ngx-multiselect-dropdown';
+
+export class MyComponent &#123;
+  items = signal(['Apple', 'Banana', 'Orange']);
+  selectedItems: string[] = [];
+&#125;</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="install-step">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3 class="step-title">Use in your template</h3>
+            <p class="step-description">Add the dropdown to your HTML</p>
+            <div class="code-block">
+              <div class="code-header">
+                <span class="code-language">html</span>
+                <button class="code-copy" (click)="copyToClipboard($event, 2)">
+                  {{ copiedIndex() === 2 ? 'Copied!' : 'Copy' }}
+                </button>
+              </div>
+              <pre><code>&lt;ngx-multiselect-dropdown
+  [data]="items()"
+  [(ngModel)]="selectedItems"
+/&gt;</code></pre>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Object Array Example -->
-    <section class="demo-section">
-      <h2>Object Array with Custom Fields</h2>
-      <p>Using custom field mapping for complex objects</p>
-      <div class="demo-example">
-        <ngx-multiselect-dropdown
-          [data]="cities()"
-          [config]="{
-            enableSelectAll: true,
-            fieldMapping: {
-              idField: 'id',
-              textField: 'name',
-              disabledField: 'disabled'
-            }
-          }"
-          [ngModel]="citySelection()"
-          (ngModelChange)="citySelection.set($event)"
-          placeholder="Select cities"
-        />
-        <div class="demo-output">
-          <strong>Selected:</strong>
-          {{ citySelection().length }} cities
+    <!-- Live Examples -->
+    <section id="examples" class="content-section section-alt">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <div>
+          <h2 class="section-title">Live Examples</h2>
+          <p class="section-subtitle">Interactive demos with implementation code</p>
+        </div>
+      </div>
+      
+      <!-- Example 1: Basic -->
+      <div class="example-box">
+        <h3><span class="example-number">01</span>Basic Multi-Select</h3>
+        <p class="example-desc">Simple dropdown with string array. Define your data and selection signals in the component class, then bind them in the template.</p>
+        <div class="example-split">
+          <div class="demo-side">
+            <h4>Live Demo</h4>
+            <ngx-multiselect-dropdown
+              [data]="simpleItems()"
+              [config]="simpleConfig()"
+              [ngModel]="simpleSelection()"
+              (ngModelChange)="simpleSelection.set($event)"
+              placeholder="Select fruits"
+            />
+            <div class="demo-output">{{ simpleSelection() | json }}</div>
+          </div>
+          <div class="code-side">
+            <h4>Component Class (app.ts)</h4>
+            <pre><code>items = signal(['Apple', 'Banana', 'Cherry']);
+selection = signal([]);</code></pre>
+            
+            <h4>Template (app.html)</h4>
+            <pre><code>&lt;ngx-multiselect-dropdown
+  [data]="items()"
+  [(ngModel)]="selection"
+/&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 2: Objects -->
+      <div class="example-box">
+        <h3><span class="example-number">02</span>Object Array with Field Mapping</h3>
+        <p class="example-desc">Work with object arrays by configuring field mapping. Specify which fields to use for id and display text in the config object.</p>
+        <div class="example-split">
+          <div class="demo-side">
+            <h4>Live Demo</h4>
+            <ngx-multiselect-dropdown
+              [data]="cities()"
+              [config]="cityConfig()"
+              [ngModel]="citySelection()"
+              (ngModelChange)="citySelection.set($event)"
+              placeholder="Select cities"
+            />
+            <div class="demo-output">{{ citySelection().length }} cities</div>
+          </div>
+          <div class="code-side">
+            <h4>Component Class (app.ts)</h4>
+            <pre><code>cities = signal([&#123; id: 1, name: 'NY' &#125;]);
+selection = signal([]);
+config = signal(&#123;
+  fieldMapping: &#123;
+    idField: 'id',
+    textField: 'name'
+  &#125;
+&#125;);</code></pre>
+            
+            <h4>Template (app.html)</h4>
+            <pre><code>&lt;ngx-multiselect-dropdown
+  [data]="cities()"
+  [config]="config()"
+  [(ngModel)]="selection"
+/&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 3: Single Selection -->
+      <div class="example-box">
+        <h3><span class="example-number">03</span>Single Selection Mode</h3>
+        <p class="example-desc">Limit selection to one item by setting singleSelection to true in config. The model will contain a single object instead of an array.</p>
+        <div class="example-split">
+          <div class="demo-side">
+            <h4>Live Demo</h4>
+            <ngx-multiselect-dropdown
+              [data]="cities()"
+              [config]="singleConfig()"
+              [ngModel]="singleSelection()"
+              (ngModelChange)="singleSelection.set($event)"
+              placeholder="Choose one city"
+            />
+            <div class="demo-output">{{ singleSelection()?.name || 'None' }}</div>
+          </div>
+          <div class="code-side">
+            <h4>Component Class (app.ts)</h4>
+            <pre><code>selection = signal(null);
+config = signal(&#123;
+  singleSelection: true,
+  fieldMapping: &#123;
+    idField: 'id',
+    textField: 'name'
+  &#125;
+&#125;);</code></pre>
+            
+            <h4>Template (app.html)</h4>
+            <pre><code>&lt;ngx-multiselect-dropdown
+  [data]="cities()"
+  [config]="config()"
+  [(ngModel)]="selection"
+/&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 4: Search -->
+      <div class="example-box">
+        <h3><span class="example-number">04</span>Searchable Dropdown</h3>
+        <p class="example-desc">Enable search functionality for large datasets. Set enableSearch to true and optionally customize the search placeholder text.</p>
+        <div class="example-split">
+          <div class="demo-side">
+            <h4>Live Demo</h4>
+            <ngx-multiselect-dropdown
+              [data]="cities()"
+              [config]="searchConfig()"
+              [ngModel]="searchSelection()"
+              (ngModelChange)="searchSelection.set($event)"
+              placeholder="Search and select"
+            />
+            <div class="demo-output">{{ searchSelection().length }} cities</div>
+          </div>
+          <div class="code-side">
+            <h4>Component Class (app.ts)</h4>
+            <pre><code>selection = signal([]);
+config = signal(&#123;
+  enableSearch: true,
+  searchPlaceholder: 'Search...',
+  fieldMapping: &#123;
+    idField: 'id',
+    textField: 'name'
+  &#125;
+&#125;);</code></pre>
+            
+            <h4>Template (app.html)</h4>
+            <pre><code>&lt;ngx-multiselect-dropdown
+  [data]="cities()"
+  [config]="config()"
+  [(ngModel)]="selection"
+/&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 5: Selection Limit -->
+      <div class="example-box">
+        <h3><span class="example-number">05</span>Selection Limit</h3>
+        <p class="example-desc">Restrict maximum selections using selectionLimit. Use displayLimit to show how many items appear before "+X more" text.</p>
+        <div class="example-split">
+          <div class="demo-side">
+            <h4>Live Demo</h4>
+            <ngx-multiselect-dropdown
+              [data]="cities()"
+              [config]="limitConfig()"
+              [ngModel]="limitSelection()"
+              (ngModelChange)="limitSelection.set($event)"
+              placeholder="Select up to 3 cities"
+            />
+            <div class="demo-output">{{ limitSelection().length }}/3 cities</div>
+          </div>
+          <div class="code-side">
+            <h4>Component Class (app.ts)</h4>
+            <pre><code>selection = signal([]);
+config = signal(&#123;
+  selectionLimit: 3,
+  displayLimit: 2,
+  fieldMapping: &#123;
+    idField: 'id',
+    textField: 'name'
+  &#125;
+&#125;);</code></pre>
+            
+            <h4>Template (app.html)</h4>
+            <pre><code>&lt;ngx-multiselect-dropdown
+  [data]="cities()"
+  [config]="config()"
+  [(ngModel)]="selection"
+/&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 6: Close on Select -->
+      <div class="example-box">
+        <h3><span class="example-number">06</span>Auto-Close on Selection</h3>
+        <p class="example-desc">Automatically close dropdown after each selection. Set closeOnSelect to true in config for this behavior.</p>
+        <div class="example-split">
+          <div class="demo-side">
+            <h4>Live Demo</h4>
+            <ngx-multiselect-dropdown
+              [data]="cities()"
+              [config]="closeOnSelectConfig()"
+              [ngModel]="closeSelection()"
+              (ngModelChange)="closeSelection.set($event)"
+              placeholder="Select cities"
+            />
+            <div class="demo-output">{{ closeSelection().length }} cities</div>
+          </div>
+          <div class="code-side">
+            <h4>Component Class (app.ts)</h4>
+            <pre><code>selection = signal([]);
+config = signal(&#123;
+  closeOnSelect: true,
+  fieldMapping: &#123;
+    idField: 'id',
+    textField: 'name'
+  &#125;
+&#125;);</code></pre>
+            
+            <h4>Template (app.html)</h4>
+            <pre><code>&lt;ngx-multiselect-dropdown
+  [data]="cities()"
+  [config]="config()"
+  [(ngModel)]="selection"
+/&gt;</code></pre>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Single Selection -->
-    <section class="demo-section">
-      <h2>Single Selection Mode</h2>
-      <p>Dropdown works like a traditional select element</p>
-      <div class="demo-example">
-        <ngx-multiselect-dropdown
-          [data]="cities()"
-          [config]="singleConfig()"
-          [ngModel]="singleSelection()"
-          (ngModelChange)="singleSelection.set($event)"
-          placeholder="Choose one city"
-        />
-        <div class="demo-output">
-          <strong>Selected:</strong>
-          {{ singleSelection()?.name || 'None' }}
+    <!-- Configuration -->
+    <section id="api" class="content-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 1v6m0 6v6m5.2-13.2l-4.2 4.2m0 6l-4.2 4.2m13.2-5.2h-6m-6 0H1m18.2 5.2l-4.2-4.2m-6 0l-4.2 4.2"></path>
+          </svg>
         </div>
+        <div>
+          <h2 class="section-title">Configuration API</h2>
+          <p class="section-subtitle">Complete configuration reference with all available options</p>
+        </div>
+      </div>
+      
+      <div class="config-table-wrapper">
+        <table class="config-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>singleSelection</code></td>
+              <td><span class="type-badge">boolean</span></td>
+              <td><code>false</code></td>
+              <td>Enable single selection mode instead of multi-select</td>
+            </tr>
+            <tr>
+              <td><code>fieldMapping</code></td>
+              <td><span class="type-badge">object</span></td>
+              <td><code>&#123;&#125;</code></td>
+              <td>Map object properties: <code>idField</code>, <code>textField</code>, <code>disabledField</code></td>
+            </tr>
+            <tr>
+              <td><code>enableSelectAll</code></td>
+              <td><span class="type-badge">boolean</span></td>
+              <td><code>true</code></td>
+              <td>Show "Select All" / "Unselect All" checkbox option</td>
+            </tr>
+            <tr>
+              <td><code>selectAllText</code></td>
+              <td><span class="type-badge">string</span></td>
+              <td><code>'Select All'</code></td>
+              <td>Custom text for "Select All" action</td>
+            </tr>
+            <tr>
+              <td><code>unselectAllText</code></td>
+              <td><span class="type-badge">string</span></td>
+              <td><code>'Unselect All'</code></td>
+              <td>Custom text for "Unselect All" action</td>
+            </tr>
+            <tr>
+              <td><code>enableSearch</code></td>
+              <td><span class="type-badge">boolean</span></td>
+              <td><code>false</code></td>
+              <td>Enable search/filter functionality for items</td>
+            </tr>
+            <tr>
+              <td><code>searchPlaceholder</code></td>
+              <td><span class="type-badge">string</span></td>
+              <td><code>'Search...'</code></td>
+              <td>Placeholder text shown in search input field</td>
+            </tr>
+            <tr>
+              <td><code>clearSearchOnClose</code></td>
+              <td><span class="type-badge">boolean</span></td>
+              <td><code>true</code></td>
+              <td>Clear search filter when dropdown closes</td>
+            </tr>
+            <tr>
+              <td><code>selectionLimit</code></td>
+              <td><span class="type-badge">number</span></td>
+              <td><code>-1</code></td>
+              <td>Maximum items that can be selected (-1 for unlimited)</td>
+            </tr>
+            <tr>
+              <td><code>displayLimit</code></td>
+              <td><span class="type-badge">number</span></td>
+              <td><code>3</code></td>
+              <td>Max selected items to display before showing "+X more"</td>
+            </tr>
+            <tr>
+              <td><code>closeOnSelect</code></td>
+              <td><span class="type-badge">boolean</span></td>
+              <td><code>false</code></td>
+              <td>Close dropdown automatically after each selection</td>
+            </tr>
+            <tr>
+              <td><code>showSelectedAtTop</code></td>
+              <td><span class="type-badge">boolean</span></td>
+              <td><code>false</code></td>
+              <td>Display selected items at the top of the dropdown list</td>
+            </tr>
+            <tr>
+              <td><code>maxHeight</code></td>
+              <td><span class="type-badge">number</span></td>
+              <td><code>300</code></td>
+              <td>Maximum height of dropdown list in pixels</td>
+            </tr>
+            <tr>
+              <td><code>noDataText</code></td>
+              <td><span class="type-badge">string</span></td>
+              <td><code>'No items'</code></td>
+              <td>Message displayed when no data is available</td>
+            </tr>
+            <tr>
+              <td><code>noResultsText</code></td>
+              <td><span class="type-badge">string</span></td>
+              <td><code>'No results'</code></td>
+              <td>Message displayed when search returns no results</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="config-example">
+        <h3>Example Configuration</h3>
+        <pre><code>// Component Class (app.ts)
+config = signal&lt;DropdownConfig&gt;(&#123;
+  singleSelection: false,
+  enableSelectAll: true,
+  enableSearch: true,
+  searchPlaceholder: 'Type to search...',
+  selectionLimit: 5,
+  displayLimit: 2,
+  closeOnSelect: false,
+  maxHeight: 250,
+  fieldMapping: &#123;
+    idField: 'id',
+    textField: 'name',
+    disabledField: 'disabled'
+  &#125;
+&#125;);
+
+// Template (app.html)
+&lt;ngx-multiselect-dropdown
+  [data]="items()"
+  [config]="config()"
+  [(ngModel)]="selection"
+/&gt;</code></pre>
       </div>
     </section>
 
-    <!-- With Search -->
-    <section class="demo-section">
-      <h2>With Search Filter</h2>
-      <p>Enable search to filter through large lists</p>
-      <div class="demo-example">
-        <ngx-multiselect-dropdown
-          [data]="cities()"
-          [config]="searchConfig()"
-          [ngModel]="searchSelection()"
-          (ngModelChange)="searchSelection.set($event)"
-          placeholder="Search and select cities"
-          (searchChange)="handleSearchChange($event)"
-        />
-        <div class="demo-output">
-          <strong>Selected:</strong>
-          {{ searchSelection().length }} cities
+    <!-- Features -->
+    <section id="features" class="content-section section-alt">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+        </div>
+        <div>
+          <h2 class="section-title">Key Features</h2>
+          <p class="section-subtitle">A comprehensive, production-ready dropdown component</p>
         </div>
       </div>
-    </section>
+      
+      <div class="features-container">
+        <div class="features-column">
+          <h3>Modern Angular</h3>
+          <ul class="features-list">
+            <li>✓ Angular 21+ with Signals support</li>
+            <li>✓ Standalone component architecture</li>
+            <li>✓ Full TypeScript strict mode</li>
+            <li>✓ Reactive forms compatible</li>
+            <li>✓ Template-driven forms support</li>
+            <li>✓ OnPush change detection</li>
+          </ul>
+        </div>
 
-    <!-- Selection Limit -->
-    <section class="demo-section">
-      <h2>Selection Limit</h2>
-      <p>Limit maximum selections and display count</p>
-      <div class="demo-example">
-        <ngx-multiselect-dropdown
-          [data]="cities()"
-          [config]="limitConfig()"
-          [ngModel]="limitSelection()"
-          (ngModelChange)="limitSelection.set($event)"
-          placeholder="Select up to 3 cities"
-        />
-        <div class="demo-output">
-          <strong>Selected:</strong>
-          {{ limitSelection().length }} / 3 cities
+        <div class="features-column">
+          <h3>Selection Modes</h3>
+          <ul class="features-list">
+            <li>✓ Multi-select with checkboxes</li>
+            <li>✓ Single selection dropdown</li>
+            <li>✓ Select All / Unselect All</li>
+            <li>✓ Selection limit control</li>
+            <li>✓ Disabled items support</li>
+            <li>✓ Pre-selected values</li>
+          </ul>
+        </div>
+
+        <div class="features-column">
+          <h3>Data Handling</h3>
+          <ul class="features-list">
+            <li>✓ String arrays support</li>
+            <li>✓ Object arrays with mapping</li>
+            <li>✓ Custom field mapping</li>
+            <li>✓ Dynamic data updates</li>
+            <li>✓ Large dataset optimization</li>
+            <li>✓ Async data loading</li>
+          </ul>
+        </div>
+
+        <div class="features-column">
+          <h3>User Experience</h3>
+          <ul class="features-list">
+            <li>✓ Search and filter items</li>
+            <li>✓ Custom placeholder text</li>
+            <li>✓ Badge display for selections</li>
+            <li>✓ Display limit with "+X more"</li>
+            <li>✓ Empty state messages</li>
+            <li>✓ Smooth animations</li>
+          </ul>
+        </div>
+
+        <div class="features-column">
+          <h3>Accessibility</h3>
+          <ul class="features-list">
+            <li>✓ WCAG 2.1 Level AA compliant</li>
+            <li>✓ Full keyboard navigation</li>
+            <li>✓ Screen reader support</li>
+            <li>✓ ARIA attributes</li>
+            <li>✓ Focus management</li>
+            <li>✓ High contrast mode</li>
+          </ul>
+        </div>
+
+        <div class="features-column">
+          <h3>Customization</h3>
+          <ul class="features-list">
+            <li>✓ Custom styling with CSS</li>
+            <li>✓ Theme variables</li>
+            <li>✓ Custom text labels</li>
+            <li>✓ Configurable height</li>
+            <li>✓ Position control</li>
+            <li>✓ Close on select option</li>
+          </ul>
         </div>
       </div>
-    </section>
-
-    <!-- Close on Select -->
-    <section class="demo-section">
-      <h2>Close on Selection</h2>
-      <p>Automatically close dropdown after each selection</p>
-      <div class="demo-example">
-        <ngx-multiselect-dropdown
-          [data]="cities()"
-          [config]="closeOnSelectConfig()"
-          [ngModel]="closeSelection()"
-          (ngModelChange)="closeSelection.set($event)"
-          placeholder="Select cities (closes after each)"
-        />
-        <div class="demo-output">
-          <strong>Selected:</strong>
-          {{ closeSelection().length }} cities
-        </div>
-      </div>
-    </section>
-
-    <!-- Features List -->
-    <section class="demo-section features">
-      <h2>Features</h2>
-      <ul>
-        <li>✅ Angular 21+ with Signals</li>
-        <li>✅ Standalone component architecture</li>
-        <li>✅ Full ControlValueAccessor support (ngModel, FormControl)</li>
-        <li>✅ Single & Multi selection modes</li>
-        <li>✅ Search/filter functionality</li>
-        <li>✅ Selection limits</li>
-        <li>✅ Keyboard navigation (Arrow keys, Enter, Escape, Home, End)</li>
-        <li>✅ ARIA accessibility attributes</li>
-        <li>✅ Click-outside to close</li>
-        <li>✅ CSS custom properties for theming</li>
-        <li>✅ TypeScript strict mode</li>
-        <li>✅ No external dependencies</li>
-      </ul>
     </section>
 
     <!-- Keyboard Shortcuts -->
-    <section class="demo-section keyboard">
-      <h2>Keyboard Navigation</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Key</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><kbd>Enter</kbd> / <kbd>Space</kbd></td>
-            <td>Open dropdown or select focused item</td>
-          </tr>
-          <tr>
-            <td><kbd>Escape</kbd></td>
-            <td>Close dropdown</td>
-          </tr>
-          <tr>
-            <td><kbd>↓</kbd> / <kbd>↑</kbd></td>
-            <td>Navigate through items</td>
-          </tr>
-          <tr>
-            <td><kbd>Home</kbd> / <kbd>End</kbd></td>
-            <td>Jump to first/last item</td>
-          </tr>
-        </tbody>
-      </table>
+    <section class="content-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+            <path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M8 12h.01M12 12h.01M16 12h.01M7 16h10"></path>
+          </svg>
+        </div>
+        <div>
+          <h2 class="section-title">Keyboard Navigation</h2>
+          <p class="section-subtitle">Complete keyboard accessibility support</p>
+        </div>
+      </div>
+      
+      <div class="keyboard-table-wrapper">
+        <table class="keyboard-table">
+          <thead>
+            <tr>
+              <th>Key(s)</th>
+              <th>Action</th>
+              <th>Context</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><kbd>Tab</kbd></td>
+              <td>Focus dropdown control</td>
+              <td>Navigation</td>
+            </tr>
+            <tr>
+              <td><kbd>Shift</kbd> + <kbd>Tab</kbd></td>
+              <td>Move focus backward</td>
+              <td>Navigation</td>
+            </tr>
+            <tr>
+              <td><kbd>Enter</kbd> or <kbd>Space</kbd></td>
+              <td>Open dropdown / Select highlighted item</td>
+              <td>Dropdown closed/open</td>
+            </tr>
+            <tr>
+              <td><kbd>Esc</kbd></td>
+              <td>Close dropdown and restore focus</td>
+              <td>Dropdown open</td>
+            </tr>
+            <tr>
+              <td><kbd>↓</kbd> (Down Arrow)</td>
+              <td>Highlight next item in list</td>
+              <td>Dropdown open</td>
+            </tr>
+            <tr>
+              <td><kbd>↑</kbd> (Up Arrow)</td>
+              <td>Highlight previous item in list</td>
+              <td>Dropdown open</td>
+            </tr>
+            <tr>
+              <td><kbd>Home</kbd></td>
+              <td>Jump to first item in list</td>
+              <td>Dropdown open</td>
+            </tr>
+            <tr>
+              <td><kbd>End</kbd></td>
+              <td>Jump to last item in list</td>
+              <td>Dropdown open</td>
+            </tr>
+            <tr>
+              <td><kbd>Page Up</kbd></td>
+              <td>Scroll up by visible page</td>
+              <td>Dropdown open</td>
+            </tr>
+            <tr>
+              <td><kbd>Page Down</kbd></td>
+              <td>Scroll down by visible page</td>
+              <td>Dropdown open</td>
+            </tr>
+            <tr>
+              <td><kbd>A-Z</kbd> / <kbd>0-9</kbd></td>
+              <td>Type to search/filter items</td>
+              <td>Search enabled</td>
+            </tr>
+            <tr>
+              <td><kbd>Ctrl</kbd> + <kbd>A</kbd></td>
+              <td>Select all items (if enabled)</td>
+              <td>Multi-select mode</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="keyboard-notes">
+        <h3>Accessibility Features</h3>
+        <ul>
+          <li><strong>ARIA Support:</strong> Proper ARIA labels, roles, and states for screen readers</li>
+          <li><strong>Focus Management:</strong> Clear focus indicators and logical tab order</li>
+          <li><strong>Screen Reader:</strong> Announces selections, counts, and state changes</li>
+          <li><strong>High Contrast:</strong> Compatible with Windows high contrast mode</li>
+          <li><strong>No Mouse Required:</strong> All functionality accessible via keyboard</li>
+        </ul>
+      </div>
     </section>
   </main>
 
-  <!-- Professional Footer with Credits -->
-  <footer class="demo-footer">
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+      </svg>
+    </div>
+    
     <div class="footer-content">
-      <div class="footer-branding">
-        <div class="footer-logo">
-          <img src="NameofCompany1.png" alt="Noble Wave Logo" class="company-logo-small" />
-        </div>
-        <p class="footer-description">
-          Building enterprise-grade solutions with modern technologies
-        </p>
-      </div>
-      
-      <div class="footer-info">
-        <div class="footer-section">
-          <h4>Library</h4>
-          <p class="library-name">ngx-multiselect-dropdown</p>
-          <p class="version">v1.0.0 • MIT License</p>
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="NameofCompany1.png" alt="Noble Wave Logo" class="footer-logo" />
+          <p class="footer-tagline">Building enterprise-grade solutions with cutting-edge technologies</p>
+          <div class="footer-badges">
+            <span class="footer-badge">Angular 21+</span>
+            <span class="footer-badge">TypeScript</span>
+            <span class="footer-badge">Open Source</span>
+          </div>
         </div>
         
-        <div class="footer-section">
-          <h4>Developer</h4>
-          <p class="developer-name">Nasre Alam</p>
-          <p class="company-name">Noble Wave Company</p>
-        </div>
-        
-        <div class="footer-section">
-          <h4>Tech Stack</h4>
-          <p>Angular 21+ • Signals</p>
-          <p>TypeScript • SCSS</p>
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4>Library</h4>
+            <ul>
+              <li><a href="#quick-start">Quick Start</a></li>
+              <li><a href="#examples">Examples</a></li>
+              <li><a href="#api">API Reference</a></li>
+              <li><a href="https://github.com/nasrealam/ngx-multiseselect-dropdown" target="_blank">GitHub Repository</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="https://github.com/nasrealam/ngx-multiselect-dropdown/issues" target="_blank">Report Issue</a></li>
+              <li><a href="https://github.com/nasrealam/ngx-multiselect-dropdown/blob/main/CHANGELOG.md" target="_blank">Changelog</a></li>
+              <li><a href="https://www.npmjs.com/package/ngx-multiselect-dropdown" target="_blank">NPM Package</a></li>
+              <li><a href="https://angular.io/" target="_blank">Angular Docs</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="https://noble-wave.com/" target="_blank">Noble Wave</a></li>
+              <li><a href="https://github.com/nasrealam" target="_blank">Developer Profile</a></li>
+              <li><a href="mailto:contact@noble-wave.com">Contact Us</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p class="copyright">© {{ currentYear }} Noble Wave. All rights reserved.</p>
-        <p class="open-source-note">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
-            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-          </svg>
-          Open Source Project • Built with ❤️
-        </p>
+        <div class="footer-copyright">
+          &copy; {{ currentYear }} Noble Wave. All rights reserved. • MIT License
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com/nasrealam/ngx-multiselect-dropdown" target="_blank" class="social-link" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+          </a>
+          <a href="https://www.npmjs.com/package/ngx-multiselect-dropdown" target="_blank" class="social-link" aria-label="NPM">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
 </div>
-
-<router-outlet />

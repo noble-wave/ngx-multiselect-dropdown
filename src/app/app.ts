@@ -1,5 +1,4 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 import {
@@ -17,7 +16,7 @@ interface City {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule, JsonPipe, MultiselectDropdownComponent],
+  imports: [FormsModule, JsonPipe, MultiselectDropdownComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
@@ -28,6 +27,9 @@ export class App {
   // Simple string array example
   protected simpleItems = signal<string[]>(['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry']);
   protected simpleSelection = signal<string[]>([]);
+  protected simpleConfig = signal<DropdownConfig>({
+    enableSelectAll: true,
+  });
 
   // Object array example
   protected cities = signal<City[]>([
@@ -41,6 +43,14 @@ export class App {
     { id: 8, name: 'Mumbai', country: 'India' },
   ]);
   protected citySelection = signal<City[]>([]);
+  protected cityConfig = signal<DropdownConfig>({
+    enableSelectAll: true,
+    fieldMapping: {
+      idField: 'id',
+      textField: 'name',
+      disabledField: 'disabled',
+    },
+  });
 
   // Single selection example
   protected singleSelection = signal<City | null>(null);
@@ -93,6 +103,9 @@ export class App {
   });
   protected closeSelection = signal<City[]>([]);
 
+  // Copy button state
+  protected copiedIndex = signal<number | null>(null);
+
   protected handleSelectionChange(items: DropdownItem<any>[]): void {
     console.log('Selection changed:', items);
   }
@@ -100,5 +113,28 @@ export class App {
   protected handleSearchChange(term: string): void {
     console.log('Search term:', term);
   }
+
+  protected async copyToClipboard(event: Event, index: number): Promise<void> {
+    const button = event.target as HTMLElement;
+    const codeBlock = button.closest('.code-block');
+    const codeElement = codeBlock?.querySelector('pre code');
+    
+    if (codeElement) {
+      const text = codeElement.textContent || '';
+      try {
+        await navigator.clipboard.writeText(text);
+        this.copiedIndex.set(index);
+        setTimeout(() => this.copiedIndex.set(null), 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    }
+  }
+
+  // Properties referenced in code example snippets (for documentation only)
+  protected selected: any[] = [];
+  protected item: string = '';
+  protected city: City = { id: 0, name: '', country: '' };
+  protected selectedCities: City[] = [];
 }
 
