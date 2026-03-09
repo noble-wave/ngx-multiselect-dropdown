@@ -20,9 +20,7 @@
     "control-value-accessor",
     "angular-accessibility",
     "wcag-compliant",
-    "zero-dependencies",
-    "ngx-multiselect-dropdown" ,
-    "@noble-wave/ngx-multiselect-dropdown"   
+    "zero-dependencies"
   ],
   "author": {
     "name": "Noble wave",
@@ -48,9 +46,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:lib": "ng-packagr -p ng-package.json",
-    "publish:lib": "npm run build:lib && npm publish dist/ngx-multiselect-dropdown --access public",
-    "publish:lib:dry": "npm run build:lib && npm publish dist/ngx-multiselect-dropdown --access public --dry-run",
+    "build:lib": "ng-packagr -p ng-package.json && node scripts/post-build.js",
+    "pack:lib": "cd dist/ngx-multiselect-dropdown && npm pack",
+    "pack:lib:check": "npm run build:lib && npm run pack:lib && tar -tzf dist/ngx-multiselect-dropdown/*.tgz",
+    "publish:lib": "npm run build:lib && cd dist/ngx-multiselect-dropdown && npm publish --access public",
+    "publish:lib:dry": "npm run build:lib && cd dist/ngx-multiselect-dropdown && npm publish --access public --dry-run",
     "release:patch": "npm version patch && npm run publish:lib",
     "release:minor": "npm version minor && npm run publish:lib",
     "release:major": "npm version major && npm run publish:lib"

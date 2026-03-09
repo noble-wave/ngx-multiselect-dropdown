@@ -19,7 +19,7 @@ Perfect for filtering data, selecting multiple items, building advanced forms, a
 
 ### Preview
 
-![Angular Multiselect Dropdown Component](.github/images/demo.gif)
+![Angular Multiselect Dropdown Component](https://raw.githubusercontent.com/noble-wave/ngx-multiselect-dropdown/main/.github/images/demo.gif)
 
 ---
 
