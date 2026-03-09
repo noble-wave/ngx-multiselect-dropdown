@@ -11,7 +11,25 @@ Perfect for filtering data, selecting multiple items, building advanced forms, a
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/yourusername/ngx-multiselect-dropdown/ci.yml)](https://github.com/yourusername/ngx-multiselect-dropdown)
 
-## 🔍 Why Choose ngx-multiselect-dropdown?
+## � Live Demo & Preview
+
+**[View Live Demo](https://stackblitz.com/edit/ngx-multiselect-dropdown-demo)** | **[Playground](https://stackblitz.com/edit/ngx-multiselect-dropdown-playground)**
+
+> **💡 Try it now**: Interactive examples showing multiselect dropdown, search filtering, reactive forms integration, and keyboard navigation.
+
+### Preview
+
+![Angular Multiselect Dropdown Component](https://via.placeholder.com/800x400/3b82f6/ffffff?text=Add+screenshot+or+GIF+here)
+
+> **Note**: Replace the placeholder above with actual screenshots or animated GIFs showing:
+> - Basic multiselect dropdown usage
+> - Search/filter functionality
+> - Single selection mode
+> - Reactive forms integration
+
+---
+
+## �🔍 Why Choose ngx-multiselect-dropdown?
 
 Best Angular multiselect dropdown for modern Angular applications with:
 - ⚡ **Zero Dependencies** - Lightweight and fast
@@ -114,7 +132,7 @@ export class AppComponent {
 
 ## 📖 Usage Examples
 
-### Basic Multi-Select
+### Angular Multiselect Dropdown - Basic Usage
 
 ```typescript
 import { Component, signal } from '@angular/core';
@@ -191,7 +209,7 @@ export class SingleSelectComponent {
 }
 ```
 
-### With Search Filter
+### Angular Dropdown with Search and Filter
 
 ```typescript
 @Component({
@@ -239,7 +257,7 @@ export class LimitComponent {
 }
 ```
 
-### Reactive Forms
+### Angular Multi Select for Reactive Forms
 
 ```typescript
 import { Component } from '@angular/core';
