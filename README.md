@@ -13,19 +13,13 @@ Perfect for filtering data, selecting multiple items, building advanced forms, a
 
 ## � Live Demo & Preview
 
-**[View Live Demo](https://stackblitz.com/edit/ngx-multiselect-dropdown-demo)** | **[Playground](https://stackblitz.com/edit/ngx-multiselect-dropdown-playground)**
+**[View Live Demo](https://noble-wave.github.io/ngx-multiselect-dropdown/)** | **[StackBlitz Playground](https://stackblitz.com/~/github.com/noble-wave/ngx-multiselect-dropdown)**
 
 > **💡 Try it now**: Interactive examples showing multiselect dropdown, search filtering, reactive forms integration, and keyboard navigation.
 
 ### Preview
 
-![Angular Multiselect Dropdown Component](https://via.placeholder.com/800x400/3b82f6/ffffff?text=Add+screenshot+or+GIF+here)
-
-> **Note**: Replace the placeholder above with actual screenshots or animated GIFs showing:
-> - Basic multiselect dropdown usage
-> - Search/filter functionality
-> - Single selection mode
-> - Reactive forms integration
+![Angular Multiselect Dropdown Component](.github/images/demo.gif)
 
 ---
 
