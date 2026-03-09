@@ -1,6 +1,6 @@
 {
   "name": "ngx-multiselect-dropdown",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Angular multiselect dropdown component built with Angular Signals and standalone architecture for Angular 17–21. Searchable multi-select dropdown with reactive forms support, keyboard navigation, accessibility (WCAG 2.1), and zero dependencies. Perfect for Angular forms and data filtering.",
   "keywords": [
     "angular",
